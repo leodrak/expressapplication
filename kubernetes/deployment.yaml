@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-getrestaurants
+  labels:
+    app: express-getrestaurants
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-getrestaurants
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: express-getrestaurants
+    spec:
+      containers:
+      - image: leodrak/express-web:latest
+        imagePullPolicy: Always
+        name: express-getrestaurants
+        ports:
+        - containerPort: 5000
+          protocol: TCP
