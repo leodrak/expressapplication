@@ -3,7 +3,6 @@ const bodyParser = require('body-parser')
 const AWS = require('aws-sdk')
 var app = express();
 
-
 // Import resources
 const restaurants = require('./restaurants')
 
