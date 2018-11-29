@@ -13,6 +13,7 @@
     "aws-sdk": "^2.341.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.2",
+    "express-healthcheck": "^0.1.0",
     "method-override": "^2.3.7",
     "node-uuid": "^1.4.8"
   }

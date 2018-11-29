@@ -25,6 +25,9 @@ app.use(function(req, res, next) {
   next()
 });
 
+// express-healthcheck: respond on /health route for LB checks
+app.use('/health', require('express-healthcheck')());
+
 // The DocumentClient class allows us to interact with DynamoDB using normal objects.
 // Documentation for the class is available here: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html
 const dynamoDb = new AWS.DynamoDB.DocumentClient()

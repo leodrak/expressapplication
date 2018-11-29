@@ -1,0 +1,8 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: express-getrestaurants
+spec:
+  backend:
+    serviceName: express-getrestaurants
+    servicePort: 80

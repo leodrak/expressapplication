@@ -8,6 +8,6 @@ services:
       - '.env'
     image: 'leodrak/express_web:latest'
     ports:
-      - '5000:5000'
+      - '5000'
     volumes:
       - '.:/app'

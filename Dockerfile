@@ -10,6 +10,9 @@ RUN npm install && mv node_modules /node_modules
 
 COPY . .
 
+HEALTHCHECK --interval=10s --timeout=3s \
+  CMD curl -f -s http://localhost:5000/health/ || exit 1
+
 LABEL maintainer="Leo Drakopoulos <leonidas.drakopoulos@gmail.com>"
 
 CMD node server.js
