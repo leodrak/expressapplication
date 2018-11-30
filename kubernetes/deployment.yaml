@@ -21,7 +21,7 @@ spec:
         app: express-getrestaurants
     spec:
       containers:
-      - image: leodrak/express-web:latest
+      - image: leodrak/express_web:latest
         imagePullPolicy: Always
         name: express-getrestaurants
         ports:
